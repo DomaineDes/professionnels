@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes — Domaine Desvignes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="accueil-fr.html">Domaine Desvignes</a></h1>
+    <nav><a href="accueil-fr.html">← Accueil</a><a href="notes-en.html">English</a></nav>
+  </div>
+</header>
+<main>
+  <h2 class="page-title">Notes</h2>
+  <p class="intro">Toutes nos notes de dégustation sont réunies dans ce document.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-body"></div>
+</div>
+
+<footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
+
+<script src="script.js"></script>
+<script>
+  buildPdfGrid('grid', [
+    { file: "fiches/notes-fr.pdf", label: "Notes de dégustation" }
+  ], 'télécharger');
+</script>
+</body>
+</html>
