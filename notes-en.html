@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes — Domaine Desvignes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="accueil-en.html">Domaine Desvignes</a></h1>
+    <nav><a href="accueil-en.html">← Home</a><a href="notes-fr.html">Français</a></nav>
+  </div>
+</header>
+<main>
+  <h2 class="page-title">Notes</h2>
+  <p class="intro">All of our tasting notes are gathered in this document.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-body"></div>
+</div>
+
+<footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
+
+<script src="script.js"></script>
+<script>
+  buildPdfGrid('grid', [
+    { file: "fiches/notes-en.pdf", label: "Tasting Notes" }
+  ], 'download');
+</script>
+</body>
+</html>

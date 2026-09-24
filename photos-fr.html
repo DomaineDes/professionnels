@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photos — Domaine Desvignes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="accueil-fr.html">Domaine Desvignes</a></h1>
+    <nav>
+      <a href="accueil-fr.html">← Accueil</a>
+      <a href="photos-en.html">English</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h2 class="page-title">Photos</h2>
+  <p class="intro">Photos réservées à un usage commercial pour la promotion de nos vins. Cliquez sur « télécharger » sous chaque image pour l'enregistrer en pleine résolution.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-body"></div>
+</div>
+
+<footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
+
+<script src="script.js"></script>
+<script>
+  buildPhotoGrid('grid', [
+    { file: "photos/domaine1.jpg", label: "Nos Vignes" },
+    { file: "photos/domaine2.jpg", label: "Nos Vignes" },
+    { file: "photos/domaine3.jpg", label: "Nos Vignes" },
+    { file: "photos/domaine4.jpg", label: "Nos Vignes" },
+    { file: "photos/gautier1.jpg", label: "Gautier" },
+    { file: "photos/gautier2.jpg", label: "Gautier" },
+    { file: "photos/gautier3.jpg", label: "Gautier" },
+    { file: "photos/gautier4.jpg", label: "Gautier" },
+    { file: "photos/gautier5.jpg", label: "Gautier" },
+    { file: "photos/gautier6.jpg", label: "Gautier" },
+    { file: "photos/gautier7.jpg", label: "Gautier" },
+    { file: "photos/gautier8.jpg", label: "Gautier" },
+    { file: "photos/gautier9.jpg", label: "Gautier" },
+    { file: "photos/gautier10.jpg", label: "Gautier" },
+    { file: "photos/bouteille1.png", label: "Givry Rouge" },
+    { file: "photos/bouteille2.png", label: "Givry Rouge <em>Champ la Dame</em>" },
+    { file: "photos/bouteille3.png", label: "Givry Rouge 1er cru <em>La Grande Berge</em>" },
+    { file: "photos/bouteille4.png", label: "Givry Rouge 1er cru <em>Ozymandias</em>" },
+    { file: "photos/bouteille5.png", label: "Givry Rouge 1er cru <em>Clos Charlé</em>" },
+    { file: "photos/bouteille6.png", label: "Givry Rouge 1er cru <em>Clos du Vernoy - Monopole</em>" },
+    { file: "photos/bouteille7.png", label: "Givry Blanc" },
+    { file: "photos/bouteille8.png", label: "Givry Blanc <em>En Chenèves</em>" },
+    { file: "photos/bouteille9.png", label: "Givry Blanc 1er cru <em>Les Grandes Vignes</em>" }
+  ], 'télécharger');
+</script>
+</body>
+</html>

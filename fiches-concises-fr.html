@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiches techniques concises — Domaine Desvignes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="accueil-fr.html">Domaine Desvignes</a></h1>
+    <nav>
+      <a href="accueil-fr.html">← Accueil</a>
+      <a href="fiches-concises-en.html">English</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h2 class="page-title">Fiches techniques concises</h2>
+  <p class="intro">Cliquez sur une fiche pour l'agrandir, ou téléchargez-la directement.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="lightbox-body"></div>
+</div>
+
+<footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
+
+<script src="script.js"></script>
+<script>
+  buildPdfGrid('grid', [
+    { file: "fiches/concise-fr-1.pdf", label: "Givry Rouge" },
+    { file: "fiches/concise-fr-2.pdf", label: "Givry Rouge <em>Champ la Dame</em>" },
+    { file: "fiches/concise-fr-3.pdf", label: "Givry Rouge 1er cru <em>La Grande Berge</em>" },
+    { file: "fiches/concise-fr-4.pdf", label: "Givry Rouge 1er cru <em>Ozymandias</em>" },
+    { file: "fiches/concise-fr-5.pdf", label: "Givry Rouge 1er cru <em>Clos Charlé</em>" },
+    { file: "fiches/concise-fr-6.pdf", label: "Givry Rouge 1er cru <em>Clos du Vernoy - Monopole</em>" },
+    { file: "fiches/concise-fr-7.pdf", label: "Givry Blanc" },
+    { file: "fiches/concise-fr-8.pdf", label: "Givry Blanc <em>En Chenèves</em>" },
+    { file: "fiches/concise-fr-9.pdf", label: "Givry Blanc 1er cru <em>Les Grandes Vignes</em>" }
+  ], 'télécharger');
+</script>
+</body>
+</html>
