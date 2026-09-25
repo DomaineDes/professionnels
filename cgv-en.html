@@ -2,29 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms & Conditions — Domaine Desvignes</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="wrap">
-    <h1><a href="accueil-en.html">Domaine Desvignes</a></h1>
-    <nav><a href="accueil-en.html">← Home</a><a href="cgv-fr.html">Français</a></nav>
-  </div>
-</header>
-<main>
-  <h2 class="page-title">Terms &amp; Conditions</h2>
-  <p class="intro">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>General Terms and Conditions of Sale – Domaine Desvignes</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://domainedes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
   :root {
     --creme:    #F5EFE0;
@@ -46,6 +27,25 @@
     font-size: 15px;
     line-height: 1.8;
   }
+
+  /* ── SITE NAV ── */
+  .site-nav {
+    background: var(--noir);
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .site-nav a {
+    color: var(--creme);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--brun-light);
+    padding-bottom: 1px;
+  }
+  .site-nav a:hover { color: var(--brun-light); }
 
   header {
     background: var(--brun);
@@ -323,6 +323,11 @@
 </head>
 <body>
 
+<nav class="site-nav">
+  <a href="accueil-en.html">← Home</a>
+  <a href="cgv-fr.html">Français</a>
+</nav>
+
 <header id="top">
   <div class="domain-name">Domaine <em>Desvignes</em></div>
   <p class="header-tagline">Earl &nbsp;·&nbsp; Wine Producer</p>
@@ -567,10 +572,5 @@
   GTC effective as of 1 January 2025
 </footer>
 
-</body>
-</html>
-  </p>
-</main>
-<footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
 </body>
 </html>
