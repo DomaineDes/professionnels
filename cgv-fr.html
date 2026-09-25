@@ -18,9 +18,570 @@
 <main>
   <h2 class="page-title">Conditions Générales de Vente</h2>
   <p class="intro">
-    Remplace ce paragraphe par le contenu de tes CGV existantes
-    (tu peux coller ton code HTML ici, à l'intérieur de la balise &lt;main&gt;,
-    en gardant le lien vers style.css tout en haut du fichier si tu veux garder la même mise en page).
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales de Vente – Domaine Desvignes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --creme:    #F5EFE0;
+    --beige:    #D9CEBC;
+    --brun:     #80363A;
+    --noir:     #1C1A17;
+    --blanc:    #FAF7F2;
+    --muted:    #7a6a58;
+    --brun-light: #928E3D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--blanc);
+    color: var(--noir);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--brun);
+    color: var(--blanc);
+    text-align: center;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% -10%, rgba(245,239,224,0.1) 0%, transparent 60%);
+  }
+
+  .domain-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .domain-name em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--creme);
+  }
+
+  .header-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-top: 0.4rem;
+    position: relative;
+  }
+
+  .header-rule {
+    width: 50px;
+    height: 1px;
+    background: var(--beige);
+    margin: 1.4rem auto 1.2rem;
+    opacity: 0.6;
+    position: relative;
+  }
+
+  .doc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--creme);
+    opacity: 0.9;
+    position: relative;
+  }
+
+  .doc-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: rgba(250,247,242,0.45);
+    margin-top: 0.5rem;
+    font-style: italic;
+    position: relative;
+  }
+
+  /* ── NAV TABLE DES MATIÈRES ── */
+  .toc {
+    background: var(--creme);
+    border-bottom: 1px solid var(--beige);
+    padding: 1.6rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    justify-content: center;
+  }
+
+  .toc a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--brun); }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.8rem 5rem;
+  }
+
+  /* ── ARTICLES ── */
+  .article {
+    margin-bottom: 2.8rem;
+    padding-bottom: 2.8rem;
+    border-bottom: 1px solid var(--beige);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .article:last-of-type { border-bottom: none; }
+
+  .article-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--beige);
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: 1px solid var(--beige);
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+  }
+
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+    font-weight: 600;
+    color: var(--brun);
+    letter-spacing: 0.02em;
+  }
+
+  .article p {
+    color: var(--noir);
+    margin-bottom: 0.8rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .article p:last-child { margin-bottom: 0; }
+
+  .article strong { font-weight: 500; color: var(--brun); }
+
+  /* ── SOUS-TITRES ── */
+  .sub-heading {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brun-light);
+    margin: 1.4rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--creme);
+  }
+
+  /* ── LISTES ── */
+  .article ul {
+    list-style: none;
+    margin: 0.5rem 0 0.9rem 0;
+    padding: 0;
+  }
+
+  .article ul li {
+    padding: 0.28rem 0 0.28rem 1.5rem;
+    position: relative;
+    color: var(--noir);
+  }
+
+  .article ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--beige);
+    font-weight: 400;
+  }
+
+  /* ── ENCADRÉS ── */
+  .box-note {
+    background: var(--creme);
+    border-left: 3px solid var(--beige);
+    padding: 0.9rem 1.2rem;
+    margin: 0.8rem 0;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .box-alert {
+    background: #fdf5f5;
+    border: 1px solid #c9a8a8;
+    border-left: 4px solid #80363A;
+    padding: 1rem 1.3rem;
+    margin: 0.8rem 0;
+    border-radius: 2px;
+  }
+
+  .box-alert p {
+    color: #80363A !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    font-size: 0.9rem;
+    margin: 0 !important;
+  }
+
+  /* ── INTRO ── */
+  .intro-block {
+    background: var(--creme);
+    border: 1px solid var(--beige);
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .intro-block::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--beige);
+    position: absolute;
+    top: -0.8rem;
+    left: 0.8rem;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .intro-block p {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.92rem;
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+  }
+
+  /* ── ORNEMENT ── */
+  .ornament {
+    text-align: center;
+    color: var(--beige);
+    font-size: 0.85rem;
+    letter-spacing: 0.6em;
+    margin: 0 0 2.5rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--noir);
+    color: rgba(245,239,224,0.45);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  footer strong { color: var(--creme); font-weight: 400; }
+
+  /* ── BACK TO TOP ── */
+  .back-top {
+    display: block;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  .back-top:hover { opacity: 1; }
+
+  @media (max-width: 520px) {
+    main { padding: 2rem 1.2rem 3rem; }
+    .article-header { flex-direction: column; gap: 0.3rem; }
+    .toc { display: none; }
+    header { padding: 2.5rem 1.2rem 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="domain-name">Domaine <em>Desvignes</em></div>
+  <p class="header-tagline">Earl &nbsp;·&nbsp; Producteur de vins</p>
+  <div class="header-rule"></div>
+  <p class="doc-title">Conditions Générales de Vente</p>
+  <p class="doc-subtitle">Vins — Vente au caveau, expédition et export</p>
+</header>
+
+<nav class="toc" aria-label="Table des matières">
+  <a href="#art1">I. Champ d'application</a>
+  <a href="#art2">II. Prix</a>
+  <a href="#art3">III. Commandes</a>
+  <a href="#art4">IV. Livraison</a>
+  <a href="#art5">V. Réclamations</a>
+  <a href="#art6">VI. Garanties</a>
+  <a href="#art7">VII. Paiement</a>
+  <a href="#art8">VIII. Défaut de paiement</a>
+  <a href="#art9">IX. Réserve de propriété</a>
+  <a href="#art10">X. Rétractation</a>
+  <a href="#art11">XI. Données personnelles</a>
+  <a href="#art12">XII. Force majeure</a>
+  <a href="#art13">XIII. Juridiction</a>
+  <a href="#art14">XIV. Divers</a>
+</nav>
+
+<main>
+
+  <div class="intro-block">
+    <p>Les présentes Conditions Générales de Vente (ci-après « CGV ») s'appliquent à l'ensemble des ventes de vins et produits associés réalisées par <strong>EARL Domaine Desvignes</strong> (ci-après « le Domaine »), qu'il s'agisse de ventes au caveau, de ventes avec expédition par transporteur sur le territoire national, ou de ventes à l'export à destination de clients établis hors du territoire national. Toute commande ou achat implique l'acceptation pleine et entière des présentes CGV, qui prévalent sur tout autre document de l'acheteur, sauf accord écrit contraire du Domaine. EARL Domaine Desvignes se réserve le droit de modifier les présentes CGV à tout moment ; les CGV applicables sont celles en vigueur au jour de la commande ou de l'achat.</p>
+  </div>
+
+  <div class="ornament">· · ·</div>
+
+  <!-- ARTICLE I -->
+  <div class="article" id="art1">
+    <div class="article-header">
+      <span class="article-num">Art. I</span>
+      <h2 class="article-title">Champ d'application</h2>
+    </div>
+    <p>Les présentes Conditions Générales de Vente (ci-après « CGV ») s'appliquent à l'ensemble des ventes de vins et produits associés réalisées par EARL Domaine Desvignes, qu'il s'agisse :</p>
+    <ul>
+      <li>de ventes au caveau, à des particuliers ou à des professionnels ;</li>
+      <li>de ventes avec expédition par transporteur, à des particuliers ou à des professionnels sur le territoire national ;</li>
+      <li>de ventes à l'export, à destination de clients établis hors du territoire national.</li>
+    </ul>
+    <p>Toute commande ou achat implique l'acceptation pleine et entière des présentes CGV, qui prévalent sur tout autre document de l'acheteur, sauf accord écrit contraire du Domaine. EARL Domaine Desvignes se réserve le droit de modifier les présentes CGV à tout moment. Les CGV applicables sont celles en vigueur au jour de la commande ou de l'achat.</p>
+  </div>
+
+  <!-- ARTICLE II -->
+  <div class="article" id="art2">
+    <div class="article-header">
+      <span class="article-num">Art. II</span>
+      <h2 class="article-title">Prix</h2>
+    </div>
+
+    <p class="sub-heading">1. Ventes au caveau</p>
+    <p>Les prix pratiqués au caveau sont affichés en euros, <strong>toutes taxes comprises (TTC)</strong>, conformément à la réglementation applicable aux ventes aux particuliers. Pour les clients professionnels achetant au caveau et pouvant justifier de leur qualité (numéro de TVA intracommunautaire, extrait Kbis ou équivalent), le prix hors taxes (HT) peut être établi sur simple demande, accompagné d'une facture HT délivrée par le Domaine.</p>
+
+    <p class="sub-heading">2. Ventes avec expédition (France)</p>
+    <p>Pour les expéditions à destination de particuliers sur le territoire national, les prix sont exprimés en euros TTC. Pour les expéditions à destination de professionnels assujettis à la TVA, les prix sont exprimés en euros HT ; la TVA applicable sera portée sur la facture. Les frais de transport et d'emballage sont facturés en sus selon les conditions précisées à l'article IV.</p>
+
+    <p class="sub-heading">3. Ventes export</p>
+    <p>Les ventes à l'export sont conclues en euros hors taxes (HT). Elles sont réalisées sous régime de suspension de droits d'accises et exonérées de TVA française, sous réserve de la fourniture par l'acheteur de tous les documents requis (numéro de TVA intracommunautaire valide pour les clients UE, ou justificatif d'exportation pour les clients hors UE). Tous droits de douane, taxes, accises et contributions dues dans le pays de destination sont à la charge exclusive de l'acheteur.</p>
+
+    <div class="box-note">Les prix sont donnés à titre indicatif et peuvent être modifiés à tout moment par le Domaine. Le prix applicable est celui en vigueur au jour de la commande. Aucun escompte n'est accordé en cas de paiement anticipé, sauf accord écrit contraire.</div>
+  </div>
+
+  <!-- ARTICLE III -->
+  <div class="article" id="art3">
+    <div class="article-header">
+      <span class="article-num">Art. III</span>
+      <h2 class="article-title">Commandes</h2>
+    </div>
+    <p>Les commandes peuvent être passées directement au caveau, par téléphone, par courrier électronique ou par tout autre moyen convenu avec le Domaine. Elles doivent préciser la nature, les références, les quantités et le prix des produits souhaités ainsi que la date et le mode de livraison envisagés.</p>
+    <p>Une commande n'est définitive qu'après <strong>confirmation écrite ou orale du Domaine</strong>. EARL Domaine Desvignes se réserve le droit d'accepter ou de refuser toute commande, notamment en cas de stock insuffisant, de difficultés d'approvisionnement ou de doute sur la solvabilité de l'acheteur.</p>
+    <p>Toute annulation de commande confirmée par le Domaine doit être notifiée par écrit dans les meilleurs délais. En cas d'annulation tardive ou injustifiée, le Domaine se réserve le droit de retenir tout acompte versé à titre d'indemnisation des frais engagés.</p>
+    <p>En raison de la nature artisanale de la production viticole, les quantités disponibles peuvent être limitées. Le Domaine ne saurait être tenu responsable d'une impossibilité de livraison résultant d'une insuffisance de stock, et proposera dans ce cas un produit de substitution ou un remboursement.</p>
+  </div>
+
+  <!-- ARTICLE IV -->
+  <div class="article" id="art4">
+    <div class="article-header">
+      <span class="article-num">Art. IV</span>
+      <h2 class="article-title">Livraison et transport</h2>
+    </div>
+
+    <p class="sub-heading">1. Vente au caveau</p>
+    <p>La vente au caveau est conclue et les produits sont remis à l'acheteur directement dans les locaux du Domaine. Le transfert de propriété et des risques s'opère au moment de la remise physique des produits à l'acheteur ou à son représentant.</p>
+
+    <p class="sub-heading">2. Expédition par transporteur (France)</p>
+    <p>Pour les ventes avec expédition sur le territoire national, le Domaine peut, selon les cas, organiser l'expédition en mandatant lui-même un transporteur, ou laisser l'acheteur organiser l'enlèvement par le transporteur de son choix.</p>
+    <p>Lorsque le Domaine organise le transport, les frais d'emballage et d'expédition sont facturés en sus du prix des produits, selon le tarif en vigueur communiqué à l'acheteur avant validation de la commande. Les produits voyagent aux risques et périls de l'acheteur jusqu'à la remise effective. En cas de dommage ou de perte constatés à la livraison, l'acheteur devra émettre des réserves précises sur le bon de livraison et en informer le Domaine par écrit dans les <strong>12 heures</strong> suivant la réception.</p>
+    <p>Lorsque l'acheteur organise le transport, les produits voyagent à ses risques et périls dès leur remise au transporteur.</p>
+    <div class="box-note">Les délais d'expédition sont donnés à titre indicatif. Un retard de livraison ne peut justifier ni l'annulation de la commande ni l'octroi de dommages et intérêts.</div>
+
+    <p class="sub-heading">3. Ventes export</p>
+    <p>Sauf disposition contraire convenue par écrit, les ventes export sont réalisées selon l'incoterm <strong>EXW (Ex Works)</strong> : les produits sont mis à disposition au départ des chais du Domaine, et l'ensemble des frais et risques de transport, d'assurance, de dédouanement et de livraison jusqu'au lieu de destination sont à la charge de l'acheteur.</p>
+    <p>Il appartient à l'acheteur export de s'assurer de la conformité de l'importation des produits avec la réglementation de son pays (licences d'importation, labels, étiquetage, etc.). EARL Domaine Desvignes ne saurait être tenu responsable des conséquences d'un défaut de conformité aux réglementations étrangères. Aucun retour de produits ne sera accepté sans accord préalable et écrit du Domaine.</p>
+  </div>
+
+  <!-- ARTICLE V -->
+  <div class="article" id="art5">
+    <div class="article-header">
+      <span class="article-num">Art. V</span>
+      <h2 class="article-title">Réception et réclamations</h2>
+    </div>
+    <p>À la réception des produits, l'acheteur est tenu de vérifier immédiatement le nombre, l'état et la conformité des produits livrés. En cas de manquant, de détérioration ou de non-conformité apparente, l'acheteur doit :</p>
+    <ul>
+      <li>émettre des réserves précises sur le bon de livraison au moment de la réception ;</li>
+      <li>adresser une réclamation écrite au Domaine par lettre recommandée avec accusé de réception dans les <strong>7 jours ouvrés</strong> suivant la réception, accompagnée de toute preuve utile (description, photographies).</li>
+    </ul>
+    <p>Passé ce délai, aucune réclamation ne pourra être prise en compte et les produits seront réputés conformes à la commande.</p>
+    <p>En cas de vice caché, l'acheteur dispose d'un délai de <strong>48 heures</strong> à compter de la découverte pour en informer le Domaine par écrit. EARL Domaine Desvignes se réserve le droit de faire procéder à toute analyse ou expertise qu'il jugerait nécessaire.</p>
+    <p>Si la responsabilité du Domaine est reconnue, le recours de l'acheteur est limité au remplacement des produits défectueux ou, en cas d'impossibilité, à leur remboursement. Aucune indemnité, pénalité ou dommages et intérêts supplémentaires ne pourront être réclamés.</p>
+  </div>
+
+  <!-- ARTICLE VI -->
+  <div class="article" id="art6">
+    <div class="article-header">
+      <span class="article-num">Art. VI</span>
+      <h2 class="article-title">Garanties et responsabilité</h2>
+    </div>
+    <p>EARL Domaine Desvignes s'engage à commercialiser des vins produits, élevés et conditionnés selon les règles de l'art, conformes aux réglementations françaises et européennes applicables aux boissons alcoolisées.</p>
+    <p>Le Domaine recommande de stocker les vins dans des conditions adaptées : cave tempérée (10–15 °C), à l'abri de la lumière, des vibrations et des odeurs, avec un taux d'humidité suffisant. Toute détérioration résultant de conditions de stockage inappropriées chez l'acheteur exclut la responsabilité du Domaine.</p>
+    <p>Sont exclus de toute garantie les défauts ou dommages liés :</p>
+    <ul>
+      <li>à un stockage ou une manipulation non conformes aux recommandations du Domaine ;</li>
+      <li>à une contamination externe (odeurs, produits chimiques, etc.) ;</li>
+      <li>à une usure normale liée au vieillissement naturel du vin ;</li>
+      <li>à des contraintes extérieures (incendie, inondation, gel, etc.) ou à tout cas de force majeure.</li>
+    </ul>
+    <p>La responsabilité de EARL Domaine Desvignes ne saurait en aucun cas excéder le montant des produits en cause, et ne pourra être engagée pour des dommages indirects ou pertes d'exploitation de l'acheteur.</p>
+  </div>
+
+  <!-- ARTICLE VII -->
+  <div class="article" id="art7">
+    <div class="article-header">
+      <span class="article-num">Art. VII</span>
+      <h2 class="article-title">Paiement</h2>
+    </div>
+
+    <p class="sub-heading">1. Modes de paiement acceptés</p>
+    <p>Le règlement peut être effectué par les moyens suivants : espèces (dans la limite légale en vigueur), chèque à l'ordre de EARL Domaine Desvignes, carte bancaire, ou virement bancaire sur le compte dont les coordonnées figurent sur la facture.</p>
+
+    <p class="sub-heading">2. Ventes au caveau</p>
+    <p>Le paiement au caveau est exigé <strong>comptant, au moment de l'achat</strong>. Aucun crédit n'est consenti pour les ventes au caveau.</p>
+
+    <p class="sub-heading">3. Ventes avec expédition — Particuliers</p>
+    <p>Pour les expéditions à des particuliers, le paiement intégral est dû <strong>avant expédition</strong> des produits.</p>
+
+    <p class="sub-heading">4. Ventes avec expédition — Professionnels et ventes export</p>
+    <p>Pour les clients professionnels (France et export), les conditions de règlement sont convenues d'un commun accord entre les parties et précisées sur le bon de commande ou la facture. À défaut de mention spécifique, le paiement est exigible comptant à réception de facture.</p>
+    <p>EARL Domaine Desvignes se réserve le droit d'exiger un acompte ou un paiement comptant pour toute première commande, ou en cas de doute sur la solvabilité de l'acheteur. Tout paiement par compensation est subordonné à l'accord écrit préalable du Domaine.</p>
+  </div>
+
+  <!-- ARTICLE VIII -->
+  <div class="article" id="art8">
+    <div class="article-header">
+      <span class="article-num">Art. VIII</span>
+      <h2 class="article-title">Défaut de paiement</h2>
+    </div>
+    <p>Tout retard de paiement au-delà de la date d'échéance convenue entraîne de plein droit :</p>
+    <ul>
+      <li>l'application d'une pénalité de retard au taux de <strong>1,5 % par mois</strong> de retard, calculée sur le montant TTC (ou HT pour les professionnels) de la facture impayée ;</li>
+      <li>une indemnité forfaitaire pour frais de recouvrement de <strong>40 €</strong> ; si les frais réels de recouvrement excèdent ce montant, le remboursement des frais justifiés pourra être exigé.</li>
+    </ul>
+    <p>En cas de non-paiement à l'échéance, toutes les sommes dues par l'acheteur deviennent immédiatement exigibles et EARL Domaine Desvignes est en droit de suspendre toute expédition ou livraison en cours. Le recours à la garantie ou toute réclamation de l'acheteur sur les produits ne l'autorise pas à suspendre ou différer ses paiements.</p>
+  </div>
+
+  <!-- ARTICLE IX -->
+  <div class="article" id="art9">
+    <div class="article-header">
+      <span class="article-num">Art. IX</span>
+      <h2 class="article-title">Réserve de propriété</h2>
+    </div>
+    <p>EARL Domaine Desvignes conserve la propriété des produits livrés jusqu'au <strong>complet paiement du prix</strong> en principal et accessoires. Le transfert de propriété n'intervient qu'à réception du paiement intégral, quel que soit le mode de livraison.</p>
+    <p>En cas de non-paiement dans les 8 jours suivant une mise en demeure restée infructueuse, le Domaine pourra exiger la restitution des produits, de plein droit et sans formalité judiciaire préalable. L'acheteur ne peut ni revendre, ni donner en gage, ni céder à titre de garantie les produits non intégralement payés.</p>
+  </div>
+
+  <!-- ARTICLE X -->
+  <div class="article" id="art10">
+    <div class="article-header">
+      <span class="article-num">Art. X</span>
+      <h2 class="article-title">Droit de rétractation</h2>
+    </div>
+    <p>Conformément aux articles L. 221-18 et suivants du Code de la consommation, tout consommateur (particulier) ayant passé commande à distance (internet, téléphone, courrier) dispose d'un délai de <strong>14 jours calendaires</strong> à compter de la réception des produits pour exercer son droit de rétractation, sans avoir à motiver sa décision.</p>
+    <p>Pour exercer ce droit, l'acheteur doit notifier sa décision au Domaine par lettre recommandée avec accusé de réception ou par courrier électronique dans ce délai. Les produits devront être retournés en parfait état, dans leur emballage d'origine, aux frais de l'acheteur. Avant tout retour, merci d'appeler le Domaine au <strong>03 85 44 51 23</strong>. La valeur des produits renvoyés figurant sur la facture vous sera remboursée déduction faite des frais de livraison initiaux, de la valeur des produits conservés, et à l'exception des frais de renvoi. Le remboursement interviendra dans les <strong>14 jours</strong> suivant la réception des produits retournés.</p>
+    <div class="box-note">Le droit de rétractation ne s'applique pas aux ventes au caveau (ventes en présentiel) ni aux ventes entre professionnels.</div>
+  </div>
+
+  <!-- ARTICLE XI -->
+  <div class="article" id="art11">
+    <div class="article-header">
+      <span class="article-num">Art. XI</span>
+      <h2 class="article-title">Données personnelles</h2>
+    </div>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, EARL Domaine Desvignes collecte et traite les données personnelles de ses clients dans le seul but d'assurer la gestion des commandes, la facturation, la livraison et la relation commerciale.</p>
+    <p>Les données sont conservées pendant la durée nécessaire à l'exécution du contrat et aux obligations légales associées. Elles ne sont pas cédées à des tiers à des fins commerciales.</p>
+    <p>Conformément au RGPD, chaque personne dispose d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité de ses données. Ces droits peuvent être exercés en adressant un courrier à EARL Domaine Desvignes ou par voie électronique. En cas de réclamation, la personne concernée peut saisir la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--brun-light);">www.cnil.fr</a>).</p>
+  </div>
+
+  <!-- ARTICLE XII -->
+  <div class="article" id="art12">
+    <div class="article-header">
+      <span class="article-num">Art. XII</span>
+      <h2 class="article-title">Force majeure</h2>
+    </div>
+    <p>EARL Domaine Desvignes ne peut être tenu responsable d'un retard ou d'une inexécution de ses obligations résultant d'un cas de force majeure, notamment : aléas climatiques affectant la récolte, incendie, inondation, grève, rupture d'approvisionnement en matières sèches (bouteilles, bouchons, cartons), épidémie, mesures gouvernementales ou toute autre cause échappant au contrôle raisonnable du Domaine.</p>
+    <p>En cas de force majeure, EARL Domaine Desvignes en informe l'acheteur dans les meilleurs délais. Les obligations des parties sont suspendues pendant la durée de l'événement. Si l'événement se prolonge au-delà de <strong>30 jours</strong>, chaque partie pourra résilier le contrat sans indemnité.</p>
+  </div>
+
+  <!-- ARTICLE XIII -->
+  <div class="article" id="art13">
+    <div class="article-header">
+      <span class="article-num">Art. XIII</span>
+      <h2 class="article-title">Droit applicable et juridiction</h2>
+    </div>
+    <p>Les présentes CGV et toutes les ventes réalisées par EARL Domaine Desvignes sont soumises au <strong>droit français</strong>.</p>
+    <p>En cas de litige, les parties s'engagent à rechercher une solution amiable avant toute action judiciaire, par l'envoi d'une lettre recommandée avec accusé de réception précisant l'objet du différend, avec un délai de réponse de 15 jours.</p>
+    <p>Pour les litiges avec des consommateurs (particuliers), et conformément aux dispositions du Code de la consommation relatives à la médiation, l'acheteur peut recourir gratuitement à un médiateur de la consommation. En l'absence de résolution amiable, le tribunal compétent sera celui du domicile du consommateur.</p>
+    <p>Pour les litiges entre professionnels, le <strong>Tribunal de Commerce de Chalon-sur-Saône</strong> sera seul compétent, même en cas de pluralité de défendeurs ou d'appel en garantie. La Convention de Vienne sur la vente internationale de marchandises est expressément exclue.</p>
+  </div>
+
+  <!-- ARTICLE XIV -->
+  <div class="article" id="art14">
+    <div class="article-header">
+      <span class="article-num">Art. XIV</span>
+      <h2 class="article-title">Dispositions diverses</h2>
+    </div>
+    <p>Si l'une quelconque des clauses des présentes CGV venait à être déclarée nulle ou inapplicable, les autres clauses conservent leur plein effet.</p>
+    <p>Le fait pour EARL Domaine Desvignes de ne pas se prévaloir à un moment donné d'une clause des présentes CGV ne vaut pas renonciation à s'en prévaloir ultérieurement.</p>
+    <p>EARL Domaine Desvignes élit domicile à l'adresse de son siège social.</p>
+  </div>
+
+  <a href="#top" class="back-top">↑ &nbsp; Retour en haut</a>
+
+</main>
+
+<footer>
+  <strong>EARL Domaine Desvignes</strong><br>
+  Conditions Générales de Vente — Vins — Vente au caveau, expédition et export<br>
+  CGV en vigueur au 1<sup>er</sup> janvier 2025
+</footer>
+
+</body>
+</html>
   </p>
 </main>
 <footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
