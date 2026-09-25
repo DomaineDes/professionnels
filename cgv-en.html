@@ -18,9 +18,557 @@
 <main>
   <h2 class="page-title">Terms &amp; Conditions</h2>
   <p class="intro">
-    Replace this paragraph with your existing English terms and conditions
-    (you can paste your HTML code inside the &lt;main&gt; tag, keeping the link
-    to style.css at the top of the file if you'd like to keep the same layout).
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Terms and Conditions of Sale – Domaine Desvignes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --creme:    #F5EFE0;
+    --beige:    #D9CEBC;
+    --brun:     #80363A;
+    --noir:     #1C1A17;
+    --blanc:    #FAF7F2;
+    --muted:    #7a6a58;
+    --brun-light: #928E3D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--blanc);
+    color: var(--noir);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  header {
+    background: var(--brun);
+    color: var(--blanc);
+    text-align: center;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% -10%, rgba(245,239,224,0.1) 0%, transparent 60%);
+  }
+
+  .domain-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .domain-name em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--creme);
+  }
+
+  .header-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.5);
+    margin-top: 0.4rem;
+    position: relative;
+  }
+
+  .header-rule {
+    width: 50px;
+    height: 1px;
+    background: var(--beige);
+    margin: 1.4rem auto 1.2rem;
+    opacity: 0.6;
+  }
+
+  .doc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--creme);
+    opacity: 0.9;
+    position: relative;
+  }
+
+  .doc-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: rgba(250,247,242,0.45);
+    margin-top: 0.5rem;
+    font-style: italic;
+    position: relative;
+  }
+
+  .toc {
+    background: var(--creme);
+    border-bottom: 1px solid var(--beige);
+    padding: 1.6rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    justify-content: center;
+  }
+
+  .toc a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--brun); }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.8rem 5rem;
+  }
+
+  .article {
+    margin-bottom: 2.8rem;
+    padding-bottom: 2.8rem;
+    border-bottom: 1px solid var(--beige);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .article:last-of-type { border-bottom: none; }
+
+  .article-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--beige);
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: 1px solid var(--beige);
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+  }
+
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+    font-weight: 600;
+    color: var(--brun);
+    letter-spacing: 0.02em;
+  }
+
+  .article p {
+    color: var(--noir);
+    margin-bottom: 0.8rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .article p:last-child { margin-bottom: 0; }
+
+  .article strong { font-weight: 500; color: var(--brun); }
+
+  .sub-heading {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brun-light);
+    margin: 1.4rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--creme);
+  }
+
+  .article ul {
+    list-style: none;
+    margin: 0.5rem 0 0.9rem 0;
+    padding: 0;
+  }
+
+  .article ul li {
+    padding: 0.28rem 0 0.28rem 1.5rem;
+    position: relative;
+    color: var(--noir);
+  }
+
+  .article ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--beige);
+  }
+
+  .box-note {
+    background: var(--creme);
+    border-left: 3px solid var(--beige);
+    padding: 0.9rem 1.2rem;
+    margin: 0.8rem 0;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .box-alert {
+    background: #fdf5f5;
+    border: 1px solid #c0a0a2;
+    border-left: 4px solid var(--brun);
+    padding: 1rem 1.3rem;
+    margin: 0.8rem 0;
+    border-radius: 2px;
+  }
+
+  .box-alert p {
+    color: var(--brun) !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    font-size: 0.9rem;
+    margin: 0 !important;
+  }
+
+  .intro-block {
+    background: var(--creme);
+    border: 1px solid var(--beige);
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .intro-block::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--beige);
+    position: absolute;
+    top: -0.8rem;
+    left: 0.8rem;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .intro-block p {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.92rem;
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--beige);
+    font-size: 0.85rem;
+    letter-spacing: 0.6em;
+    margin: 0 0 2.5rem;
+  }
+
+  footer {
+    background: var(--noir);
+    color: rgba(245,239,224,0.45);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  footer strong { color: var(--creme); font-weight: 400; }
+
+  .back-top {
+    display: block;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  .back-top:hover { opacity: 1; }
+
+  @media (max-width: 520px) {
+    main { padding: 2rem 1.2rem 3rem; }
+    .article-header { flex-direction: column; gap: 0.3rem; }
+    .toc { display: none; }
+    header { padding: 2.5rem 1.2rem 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="domain-name">Domaine <em>Desvignes</em></div>
+  <p class="header-tagline">Earl &nbsp;·&nbsp; Wine Producer</p>
+  <div class="header-rule"></div>
+  <p class="doc-title">General Terms and Conditions of Sale</p>
+  <p class="doc-subtitle">Wines — Cellar sales, shipping and export</p>
+</header>
+
+<nav class="toc" aria-label="Table of contents">
+  <a href="#art1">I. Scope</a>
+  <a href="#art2">II. Prices</a>
+  <a href="#art3">III. Orders</a>
+  <a href="#art4">IV. Delivery</a>
+  <a href="#art5">V. Claims</a>
+  <a href="#art6">VI. Warranties</a>
+  <a href="#art7">VII. Payment</a>
+  <a href="#art8">VIII. Late payment</a>
+  <a href="#art9">IX. Retention of title</a>
+  <a href="#art10">X. Right of withdrawal</a>
+  <a href="#art11">XI. Personal data</a>
+  <a href="#art12">XII. Force majeure</a>
+  <a href="#art13">XIII. Jurisdiction</a>
+  <a href="#art14">XIV. Miscellaneous</a>
+</nav>
+
+<main>
+
+  <div class="intro-block">
+    <p>These General Terms and Conditions of Sale (hereinafter "GTC") apply to all sales of wines and associated products carried out by <strong>EARL Domaine Desvignes</strong> (hereinafter "the Estate"), whether cellar sales, sales with shipment by carrier within France, or export sales to customers established outside French territory. Any order or purchase implies full and unconditional acceptance of these GTC, which take precedence over any document issued by the buyer, unless otherwise agreed in writing by the Estate. EARL Domaine Desvignes reserves the right to amend these GTC at any time; the applicable GTC are those in force on the date of the order or purchase.</p>
+  </div>
+
+  <div class="ornament">· · ·</div>
+
+  <!-- ARTICLE I -->
+  <div class="article" id="art1">
+    <div class="article-header">
+      <span class="article-num">Art. I</span>
+      <h2 class="article-title">Scope of Application</h2>
+    </div>
+    <p>These General Terms and Conditions of Sale apply to all sales of wines and associated products carried out by EARL Domaine Desvignes, including:</p>
+    <ul>
+      <li>cellar sales, to private individuals or trade customers;</li>
+      <li>sales with shipment by carrier, to private individuals or trade customers within France;</li>
+      <li>export sales, to customers established outside French territory.</li>
+    </ul>
+    <p>Any order or purchase implies full and unconditional acceptance of these GTC, which take precedence over any document issued by the buyer, unless otherwise agreed in writing by the Estate. EARL Domaine Desvignes reserves the right to amend these GTC at any time. The applicable GTC are those in force on the date of the order or purchase.</p>
+  </div>
+
+  <!-- ARTICLE II -->
+  <div class="article" id="art2">
+    <div class="article-header">
+      <span class="article-num">Art. II</span>
+      <h2 class="article-title">Prices</h2>
+    </div>
+
+    <p class="sub-heading">1. Cellar Sales</p>
+    <p>Prices at the cellar are displayed in euros, <strong>inclusive of all taxes (VAT included)</strong>, in accordance with the regulations applicable to sales to private individuals. Trade customers purchasing at the cellar who can provide proof of their status (intra-community VAT number, Kbis extract or equivalent) may request a pre-tax (ex-VAT) price, accompanied by a pre-tax invoice issued by the Estate.</p>
+
+    <p class="sub-heading">2. Sales with Shipment (France)</p>
+    <p>For shipments to private individuals within France, prices are quoted in euros inclusive of VAT. For shipments to VAT-registered trade customers, prices are quoted in euros excluding VAT; the applicable VAT will be shown on the invoice. Shipping and packaging costs are charged separately in accordance with the conditions set out in Article IV.</p>
+
+    <p class="sub-heading">3. Export Sales</p>
+    <p>Export sales are concluded in euros excluding tax (ex-VAT). They are carried out under excise duty suspension and are exempt from French VAT, subject to the buyer providing all required documentation (valid intra-community VAT number for EU customers, or export certificate for non-EU customers). All customs duties, taxes, excise duties and levies due in the country of destination are the sole responsibility of the buyer.</p>
+
+    <div class="box-note">Prices are given as an indication and may be modified at any time by the Estate. The applicable price is that in force on the date of the order. No early-payment discount is granted unless otherwise agreed in writing.</div>
+  </div>
+
+  <!-- ARTICLE III -->
+  <div class="article" id="art3">
+    <div class="article-header">
+      <span class="article-num">Art. III</span>
+      <h2 class="article-title">Orders</h2>
+    </div>
+    <p>Orders may be placed directly at the cellar, by telephone, by email or by any other means agreed with the Estate. They must specify the nature, references, quantities and price of the products requested, as well as the desired delivery date and method.</p>
+    <p>An order is only final upon <strong>written or verbal confirmation by the Estate</strong>. EARL Domaine Desvignes reserves the right to accept or refuse any order, in particular in the event of insufficient stock, supply difficulties or doubt regarding the buyer's creditworthiness.</p>
+    <p>Any cancellation of an order confirmed by the Estate must be notified in writing as soon as possible. In the event of late or unjustified cancellation, the Estate reserves the right to retain any deposit paid as compensation for costs incurred.</p>
+    <p>Due to the artisanal nature of wine production, available quantities may be limited. The Estate cannot be held responsible for an inability to deliver resulting from insufficient stock, and will in such cases offer a substitute product or a refund.</p>
+  </div>
+
+  <!-- ARTICLE IV -->
+  <div class="article" id="art4">
+    <div class="article-header">
+      <span class="article-num">Art. IV</span>
+      <h2 class="article-title">Delivery and Transport</h2>
+    </div>
+
+    <p class="sub-heading">1. Cellar Sales</p>
+    <p>Cellar sales are concluded and products are handed over to the buyer directly on the Estate's premises. Transfer of ownership and risk occurs at the moment of physical handover of the products to the buyer or their representative.</p>
+
+    <p class="sub-heading">2. Shipment by Carrier (France)</p>
+    <p>For sales with shipment within France, the Estate may either arrange shipment itself by appointing a carrier, or allow the buyer to arrange collection by a carrier of their choice. The applicable shipping method is specified at the time of the order.</p>
+    <p>When the Estate arranges transport, packaging and shipping costs are charged in addition to the product price, according to the applicable rate communicated to the buyer before order confirmation. Products travel at the buyer's risk until effective delivery. In the event of damage or loss noted upon delivery, the buyer must record precise and detailed reservations on the delivery note and notify the Estate in writing within <strong>12 hours</strong> of receipt.</p>
+    <p>When the buyer arranges transport, products travel at the buyer's risk from the moment they are handed over to the carrier.</p>
+    <div class="box-note">Shipping lead times are given as an indication only. A delay in delivery cannot justify order cancellation or the award of damages.</div>
+
+    <p class="sub-heading">3. Export Sales</p>
+    <p>Unless otherwise agreed in writing, export sales are made under <strong>EXW (Ex Works)</strong> incoterm: products are made available at the Estate's premises, and all transport, insurance, customs clearance and delivery costs and risks to the destination are the buyer's responsibility.</p>
+    <p>It is the export buyer's responsibility to ensure that the importation of the products complies with their country's regulations (import licences, labelling, etc.). EARL Domaine Desvignes cannot be held responsible for the consequences of any failure to comply with foreign regulations. No returns will be accepted without the Estate's prior written agreement.</p>
+  </div>
+
+  <!-- ARTICLE V -->
+  <div class="article" id="art5">
+    <div class="article-header">
+      <span class="article-num">Art. V</span>
+      <h2 class="article-title">Receipt and Claims</h2>
+    </div>
+    <p>Upon receipt of the products, the buyer must immediately verify the quantity, condition and conformity of the products delivered. In the event of a shortage, damage or apparent non-conformity, the buyer must:</p>
+    <ul>
+      <li>record precise reservations on the delivery note at the time of receipt;</li>
+      <li>send a written claim to the Estate by recorded delivery letter within <strong>7 working days</strong> of receipt, accompanied by all relevant supporting evidence (description, photographs).</li>
+    </ul>
+    <p>After this period, no claim will be considered and the products will be deemed to conform to the order.</p>
+    <p>In the event of a latent defect, the buyer has <strong>48 hours</strong> from discovery to notify the Estate in writing. EARL Domaine Desvignes reserves the right to carry out any analysis or expert assessment it deems necessary.</p>
+    <p>If the Estate's liability is established, the buyer's remedy is limited to replacement of the defective products or, where this is not possible, to their reimbursement. No additional compensation, penalties or damages may be claimed.</p>
+  </div>
+
+  <!-- ARTICLE VI -->
+  <div class="article" id="art6">
+    <div class="article-header">
+      <span class="article-num">Art. VI</span>
+      <h2 class="article-title">Warranties and Liability</h2>
+    </div>
+    <p>EARL Domaine Desvignes undertakes to sell wines produced, aged and bottled according to best practices, in compliance with applicable French and European regulations governing alcoholic beverages.</p>
+    <p>The Estate recommends storing wines in appropriate conditions: a temperature-controlled cellar (10–15°C), away from light, vibrations and odours, with adequate humidity. Any deterioration resulting from unsuitable storage conditions at the buyer's premises excludes the Estate's liability.</p>
+    <p>The following defects and damages are excluded from any warranty:</p>
+    <ul>
+      <li>storage or handling not in accordance with the Estate's recommendations;</li>
+      <li>external contamination (odours, chemicals, etc.);</li>
+      <li>normal wear resulting from the natural ageing of the wine;</li>
+      <li>external events (fire, flooding, frost, etc.) or any case of force majeure.</li>
+    </ul>
+    <p>The liability of EARL Domaine Desvignes shall in no case exceed the value of the products concerned, and shall not be engaged for indirect damages or loss of profit suffered by the buyer.</p>
+  </div>
+
+  <!-- ARTICLE VII -->
+  <div class="article" id="art7">
+    <div class="article-header">
+      <span class="article-num">Art. VII</span>
+      <h2 class="article-title">Payment</h2>
+    </div>
+
+    <p class="sub-heading">1. Accepted Payment Methods</p>
+    <p>Payment may be made by the following means: cash (within the applicable legal limit), cheque payable to EARL Domaine Desvignes, bank card, or bank transfer to the account details shown on the invoice.</p>
+
+    <p class="sub-heading">2. Cellar Sales</p>
+    <p>Payment at the cellar is required <strong>in full at the time of purchase</strong>. No credit is extended for cellar sales.</p>
+
+    <p class="sub-heading">3. Sales with Shipment — Private Individuals</p>
+    <p>For shipments to private individuals, full payment is due <strong>before dispatch</strong> of the products.</p>
+
+    <p class="sub-heading">4. Sales with Shipment — Trade Customers and Export Sales</p>
+    <p>For trade customers (France and export), payment terms are agreed between the parties and specified on the purchase order or invoice. In the absence of specific terms, payment is due in full upon receipt of invoice.</p>
+    <p>EARL Domaine Desvignes reserves the right to require a deposit or full payment in advance for any first order, or where doubt exists regarding the buyer's creditworthiness. Any payment by set-off is subject to the Estate's prior written agreement.</p>
+  </div>
+
+  <!-- ARTICLE VIII -->
+  <div class="article" id="art8">
+    <div class="article-header">
+      <span class="article-num">Art. VIII</span>
+      <h2 class="article-title">Late Payment</h2>
+    </div>
+    <p>Any payment delay beyond the agreed due date automatically gives rise to:</p>
+    <ul>
+      <li>the application of a late payment penalty at a rate of <strong>1.5% per month</strong>, calculated on the VAT-inclusive amount (or ex-VAT for trade customers) of the unpaid invoice;</li>
+      <li>a fixed recovery fee of <strong>€40</strong>; where actual recovery costs exceed this amount, reimbursement of the justified costs may be claimed.</li>
+    </ul>
+    <p>In the event of non-payment by the due date, all sums owed by the buyer become immediately due and payable, and EARL Domaine Desvignes is entitled to suspend any shipment or delivery in progress. Any warranty claim or complaint by the buyer does not entitle them to suspend or defer their payments.</p>
+  </div>
+
+  <!-- ARTICLE IX -->
+  <div class="article" id="art9">
+    <div class="article-header">
+      <span class="article-num">Art. IX</span>
+      <h2 class="article-title">Retention of Title</h2>
+    </div>
+    <p>EARL Domaine Desvignes retains title to the delivered products until <strong>full payment of the price</strong>, including principal and ancillary costs. Transfer of ownership only occurs upon receipt of full payment, regardless of the delivery method.</p>
+    <p>In the event of non-payment within 8 days of an unsuccessful formal notice, the Estate may demand the return of the products by right and without prior legal proceedings. The buyer may not resell, pledge or transfer as security any products that have not been fully paid for.</p>
+  </div>
+
+  <!-- ARTICLE X -->
+  <div class="article" id="art10">
+    <div class="article-header">
+      <span class="article-num">Art. X</span>
+      <h2 class="article-title">Right of Withdrawal (Distance Sales to Private Individuals)</h2>
+    </div>
+    <p>In accordance with Articles L. 221-18 et seq. of the French Consumer Code, any consumer (private individual) who has placed a distance order (internet, telephone, post) has a period of <strong>14 calendar days</strong> from receipt of the products to exercise their right of withdrawal, without needing to give a reason.</p>
+    <p>To exercise this right, the buyer must notify the Estate of their decision by recorded delivery letter or email within this period. Products must be returned in perfect condition, in their original packaging, at the buyer's expense. Prior to any return, please call the Estate on <strong>+33 3 85 44 51 23</strong>. The value of the returned products as shown on the invoice will be refunded, less the original delivery costs, the value of any products retained, and return shipping costs. The refund will be made within <strong>14 days</strong> of receipt of the returned products.</p>
+    <div class="box-note">The right of withdrawal does not apply to cellar sales (in-person sales) or to sales between trade parties.</div>
+  </div>
+
+  <!-- ARTICLE XI -->
+  <div class="article" id="art11">
+    <div class="article-header">
+      <span class="article-num">Art. XI</span>
+      <h2 class="article-title">Personal Data</h2>
+    </div>
+    <p>In accordance with the General Data Protection Regulation (GDPR) and the French Data Protection Act, EARL Domaine Desvignes collects and processes its customers' personal data solely for the purpose of managing orders, invoicing, delivery and the commercial relationship.</p>
+    <p>Data is retained for the period necessary for the performance of the contract and associated legal obligations. It is not transferred to third parties for commercial purposes.</p>
+    <p>In accordance with the GDPR, every individual has the right to access, rectify, erase, object to and port their data. These rights may be exercised by writing to EARL Domaine Desvignes or by electronic means. In the event of a complaint, the individual concerned may contact the CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--brun-light);">www.cnil.fr</a>).</p>
+  </div>
+
+  <!-- ARTICLE XII -->
+  <div class="article" id="art12">
+    <div class="article-header">
+      <span class="article-num">Art. XII</span>
+      <h2 class="article-title">Force Majeure</h2>
+    </div>
+    <p>EARL Domaine Desvignes cannot be held liable for any delay or failure to perform its obligations resulting from a force majeure event, including: weather events affecting the harvest, fire, flooding, strikes, shortage of dry materials (bottles, corks, cartons), epidemic, government measures or any other cause beyond the Estate's reasonable control.</p>
+    <p>In the event of force majeure, EARL Domaine Desvignes will notify the buyer as soon as possible. The parties' obligations are suspended for the duration of the event. If the event continues beyond <strong>30 days</strong>, either party may terminate the contract without compensation.</p>
+  </div>
+
+  <!-- ARTICLE XIII -->
+  <div class="article" id="art13">
+    <div class="article-header">
+      <span class="article-num">Art. XIII</span>
+      <h2 class="article-title">Governing Law and Jurisdiction</h2>
+    </div>
+    <p>These GTC and all sales carried out by EARL Domaine Desvignes are governed by <strong>French law</strong>.</p>
+    <p>In the event of a dispute, the parties undertake to seek an amicable resolution before initiating any legal proceedings, by sending a recorded delivery letter setting out the subject of the dispute, with a 15-day response period.</p>
+    <p>For disputes with consumers (private individuals), and in accordance with the provisions of the French Consumer Code on mediation, the buyer may have free recourse to a consumer mediator. In the absence of an amicable resolution, the competent court will be that of the consumer's place of residence.</p>
+    <p>For disputes between trade parties, the <strong>Commercial Court of Chalon-sur-Saône</strong> shall have sole jurisdiction, including in the event of multiple defendants or warranty claims. The Vienna Convention on the International Sale of Goods is expressly excluded.</p>
+  </div>
+
+  <!-- ARTICLE XIV -->
+  <div class="article" id="art14">
+    <div class="article-header">
+      <span class="article-num">Art. XIV</span>
+      <h2 class="article-title">Miscellaneous Provisions</h2>
+    </div>
+    <p>Should any clause of these GTC be declared null and void or unenforceable, the remaining clauses shall remain in full force and effect.</p>
+    <p>The fact that EARL Domaine Desvignes does not invoke a clause of these GTC at any given time shall not constitute a waiver of the right to invoke it at a later date.</p>
+    <p>EARL Domaine Desvignes elects domicile at the address of its registered office.</p>
+  </div>
+
+  <a href="#top" class="back-top">↑ &nbsp; Back to top</a>
+
+</main>
+
+<footer>
+  <strong>EARL Domaine Desvignes</strong><br>
+  General Terms and Conditions of Sale — Wines — Cellar sales, shipping and export<br>
+  GTC effective as of 1 January 2025
+</footer>
+
+</body>
+</html>
   </p>
 </main>
 <footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
