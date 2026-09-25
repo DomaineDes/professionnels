@@ -59,3 +59,29 @@ document.addEventListener('DOMContentLoaded', () => {
   lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 });
+
+// --- Protection par code d'accès (pages sensibles) ---
+function protectPage(code) {
+  const content = document.getElementById('protectedContent');
+  const gate = document.getElementById('accessGate');
+  if (sessionStorage.getItem('dd_access') === 'ok') {
+    content.style.display = 'block';
+    return;
+  }
+  gate.style.display = 'block';
+  const submit = () => tryUnlock(code);
+  document.getElementById('gateSubmit').addEventListener('click', submit);
+  document.getElementById('gateInput').addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+}
+function tryUnlock(code) {
+  const val = document.getElementById('gateInput').value.trim();
+  const errorMsg = document.getElementById('gateInput').dataset.error;
+  if (val === code) {
+    sessionStorage.setItem('dd_access', 'ok');
+    document.getElementById('accessGate').style.display = 'none';
+    document.getElementById('protectedContent').style.display = 'block';
+  } else {
+    document.getElementById('gateError').textContent = errorMsg;
+  }
+}
+

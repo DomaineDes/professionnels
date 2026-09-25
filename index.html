@@ -17,15 +17,70 @@
     text-decoration:none; font-family:'Cormorant Garamond',serif; font-size:1.2rem;
   }
   .langs a:hover { background: var(--olive); }
+
+  #gate { display:flex; flex-direction:column; align-items:center; gap:1rem; }
+  #gate input {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid #D9D0BF;
+    text-align: center;
+    width: 12rem;
+    letter-spacing: 0.15em;
+  }
+  #gate button {
+    padding: 0.7rem 2rem;
+    background: var(--wine);
+    color: var(--stone);
+    border: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  #gate button:hover { background: var(--olive); }
+  #gateError { color: var(--wine); font-size: 0.85rem; min-height: 1.2em; }
 </style>
 </head>
 <body>
   <div class="box">
     <h1>Domaine Desvignes</h1>
-    <div class="langs">
+
+    <div id="gate">
+      <input type="text" inputmode="numeric" id="codeInput" placeholder="Code d'accès" maxlength="12" autofocus>
+      <button onclick="checkCode()">Valider</button>
+      <div id="gateError"></div>
+    </div>
+
+    <div class="langs" id="langs" style="display:none;">
       <a href="accueil-fr.html">Français</a>
       <a href="accueil-en.html">English</a>
     </div>
   </div>
+
+  <script>
+    const ACCESS_CODE = "467294";
+
+    function unlock() {
+      document.getElementById('gate').style.display = 'none';
+      document.getElementById('langs').style.display = 'flex';
+    }
+
+    function checkCode() {
+      const val = document.getElementById('codeInput').value.trim();
+      if (val === ACCESS_CODE) {
+        sessionStorage.setItem('dd_access', 'ok');
+        unlock();
+      } else {
+        document.getElementById('gateError').textContent = "Code incorrect.";
+      }
+    }
+
+    document.getElementById('codeInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') checkCode();
+    });
+
+    // Reste déverrouillé pendant la session du navigateur (pas besoin de retaper le code à chaque page)
+    if (sessionStorage.getItem('dd_access') === 'ok') unlock();
+  </script>
 </body>
 </html>

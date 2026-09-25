@@ -114,3 +114,20 @@ footer.site-footer {
   text-align: left; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem 3rem;
   color: #8A8172; font-size: 0.85rem;
 }
+
+#accessGate {
+  max-width: 320px; margin: 5rem auto; text-align: center; padding: 1.5rem;
+}
+#accessGate h2 { margin-bottom: 1rem; }
+#accessGate input {
+  font-family: 'Inter', sans-serif; font-size: 1.1rem; padding: 0.7rem 1rem;
+  border: 1px solid #D9D0BF; text-align: center; width: 100%;
+  letter-spacing: 0.15em; margin-bottom: 0.75rem;
+}
+#accessGate button {
+  padding: 0.7rem 2rem; background: var(--wine); color: var(--stone); border: none;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; cursor: pointer;
+}
+#accessGate button:hover { background: var(--olive); }
+#accessGate .gate-error { color: var(--wine); font-size: 0.85rem; min-height: 1.2em; margin-top: 0.5rem; }
+

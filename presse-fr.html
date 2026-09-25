@@ -9,6 +9,15 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div id="accessGate" style="display:none;">
+  <h2>Accès protégé</h2>
+  <input type="text" inputmode="numeric" id="gateInput" placeholder="Code d'accès" maxlength="12" data-error="Code incorrect." autofocus>
+  <button id="gateSubmit">Valider</button>
+  <div id="gateError" class="gate-error"></div>
+</div>
+
+<div id="protectedContent" style="display:none;">
 <header class="site-header">
   <div class="wrap">
     <h1><a href="accueil-fr.html">Domaine Desvignes</a></h1>
@@ -27,6 +36,7 @@
 </div>
 
 <footer class="site-footer">Domaine Desvignes — Givry, Côte Chalonnaise</footer>
+</div>
 
 <script src="script.js"></script>
 <script>
@@ -37,6 +47,7 @@
     { file: "fiches/presse-4.pdf", label: "Jacques Dupont — <em>Le Point</em>" },
     { file: "fiches/presse-5.pdf", label: "Jacques Dupont — <em>La Revue des Vins de France</em>" }
   ], 'télécharger');
+  protectPage("467294");
 </script>
 </body>
 </html>
