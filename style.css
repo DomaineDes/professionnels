@@ -93,6 +93,7 @@ figcaption, .pdf-info {
 }
 figcaption span, .pdf-info span { font-size: 0.92rem; line-height: 1.35; }
 figcaption span em, .pdf-info span em { font-style: italic; }
+.wine-blanc { color: var(--olive); }
 a.download {
   font-size: 0.85rem; color: var(--wine); text-decoration: none;
   border-bottom: 1px solid var(--olive); padding-bottom: 1px; white-space: nowrap;
