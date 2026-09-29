@@ -2,6 +2,7 @@ function buildPhotoGrid(containerId, items, dlLabel) {
   const el = document.getElementById(containerId);
   items.forEach(p => {
     const fig = document.createElement("figure");
+    if (p.accent) fig.classList.add('accent-' + p.accent);
     fig.innerHTML = `
       <img src="${p.file}" alt="${(p.label||'').replace(/<[^>]+>/g,'')}" loading="lazy" data-full="${p.file}">
       <figcaption>
@@ -19,7 +20,7 @@ function buildPdfGrid(containerId, items, dlLabel) {
   const el = document.getElementById(containerId);
   items.forEach(p => {
     const card = document.createElement('div');
-    card.className = 'pdf-card';
+    card.className = 'pdf-card' + (p.accent ? ' accent-' + p.accent : '');
     card.innerHTML = `
       <div class="pdf-thumb" data-full="${p.file}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
